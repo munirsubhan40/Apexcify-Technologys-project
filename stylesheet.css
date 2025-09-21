@@ -1,0 +1,493 @@
+.header {
+    background-color: #003366;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    color: #fff;
+    z-index: 1000;
+    box-sizing: border-box;
+    height: 70px;
+}
+.logo:hover {
+  transform: scale(1.1); /* thoda zoom */
+  cursor: pointer; /* cursor change */
+}
+.image1{
+    margin-top: 15%;
+}
+
+.image1:hover {
+    margin-top: 100px;
+  transform: scale(1.1); /* thoda zoom */
+  box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.87); /* shadow aayegi */
+  cursor: pointer; /* cursor change */
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-right: 40px;
+}
+
+.navbar {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header li {
+    font-size: 1.3rem;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.header a:focus,
+.header a:active {
+    background: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+}
+/* ...existing code... */
+
+main {
+    margin-top: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 70vh;
+}
+
+.hero-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center; /* Add this line */
+    gap: 60px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 20px;
+}
+
+.hero-container h1 {
+    font-size: 3rem;
+    margin-bottom: -20px;
+    color: #003366;
+}
+.hero-container h3 {
+    font-size: 2rem;
+    margin-bottom: -20px;
+    color: #050505;
+}
+.hero-container p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #000000;
+}
+.hero-text {
+    text-align: left;
+    max-width: 700px;
+    margin-bottom: 10%;
+}
+
+.hero-container img {
+    width: 320px;
+    box-shadow: 0 0 20px #b3c6e7;
+    border-radius: 6px;
+}
+
+/* ...rest of your code... */
+/* ...existing code... */
+
+.vision-section {
+    background: #f3f4f6;
+    padding: 60px 0 40px 0;
+    text-align: center;
+}
+
+.vision-img {
+    margin-top: 60px;
+    width: 800px;
+    height: 150px;
+    max-width: 90vw;
+    box-shadow: 0 0 30px #003366;
+    border-radius: 1px;
+    border: solid 2px;
+    border-color: #003366;
+    margin-bottom: 30px;
+   
+}
+.vision-img:hover {
+  transform: scale(1.1); /* thoda zoom */
+  box-shadow: 8px 8px 8px 8px rgba(32, 29, 204, 0.87); /* shadow aayegi */
+  cursor: pointer; /* cursor change */
+}
+
+.vision-section h2 {
+    color: #003366;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: -10px;
+    text-align: left;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vision-section p {
+    font-size: 1.7rem;
+    color: #222;
+    margin-left: 40%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.vision-section ul {
+    list-style-type: disc;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #222;
+    margin-top: 0%;
+}
+/* ...rest of your code... */
+
+.button {
+    background-color: #023f7c;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+.main2 h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: #003366;
+    margin-top: 10%;
+    margin-bottom: 6%;
+}
+
+/* ...existing code... */
+.services-section {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 40px 0 60px 0;
+    
+}
+
+.service-card {
+    background: #f3f3f3;
+    border-radius: 35px;
+    box-shadow: 0 0 0 #0002;
+    padding: 50px 40px 40px 40px;
+    width: 450px;
+    height: 400px;
+    max-width: 90vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+     
+}
+.service-card:hover {
+  transform: scale(1.1); /* thoda zoom */
+  cursor: pointer; /* cursor change */
+}
+
+.service-icon {
+    width: 60px;
+    height: 80px;
+    border: 2px solid #222;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-radius: 4px;
+    background:#f3f3f3;
+}
+
+.service-card h2 {
+    font-size: 2.5rem;
+    color: #050505;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.service-card p {
+    font-size: 1.5rem;
+    color: #222;
+    margin: 0;
+}
+.button1{
+    cursor: pointer;
+    border: #f3f3f3;
+    border-radius: 40px;
+}
+/* ...existing code... */
+.service-card.single {
+    width: 80vw;
+    max-width: 1100px;
+    margin: 40px auto;
+    border: 4px solid #d3dbe4;
+    box-sizing: border-box;
+    box-shadow: none;
+    background: #f3f3f3;
+    background-color: #f3f3f3;
+    cursor: pointer;
+}
+
+.internship-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;}
+.internship-section {
+    background: #f3f3f3;
+    padding: 60px 0 60px 0;
+    text-align: center;
+    margin: 0;
+}
+
+.internship-section h2 {
+    color: #003366;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.internship-section p {
+    font-size: 2rem;
+    color: #111;
+    font-weight: bold;
+    max-width: 1100px;
+    margin: 0 auto;
+    line-height: 1.3;
+}
+
+.internship-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+
+.internship-card {
+    background: #fff;
+    border: 2px solid #616b72;
+    border-radius: 24px;
+    width: 500px;
+    height: 450px;
+    max-width: 90vw;
+    text-align: center;
+    padding: 40px 30px 30px 30px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.internship-card h3 {
+    color: #003366;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.internship-card p {
+    font-size: 1.5rem;
+    color: #111;
+    font-weight: bold;
+    margin: 0;
+}
+.service-card.single {
+    background: #fff;        /* Add this line */
+    width: 80vw;
+    max-width: 1100px;
+    margin: 40px auto;
+    border: 4px solid #d3dbe4;
+    box-sizing: border-box;
+    box-shadow: none;
+}
+.internship-card .service-icon {
+    width: 60px;
+    height: 80px;
+    border: 2px solid #fff;
+    margin: 0 auto 30px auto;
+    border-radius: 4px;
+    background: #fff;
+}
+.apply-info {
+    text-align: center;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5%;
+    
+}
+.apply-info a {
+    color: #0033cc;
+    text-decoration: underline;
+}
+/* ...existing code... */
+.contact-section {
+    padding: 60px 0 60px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: #003366;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    max-width: 80vw;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    flex: 1;
+    font-size: 2rem;
+    padding: 20px;
+    border: 4px solid #003366;
+    border-radius: 16px;
+    outline: none;
+    background: #fff;
+    color: #222;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border 0.2s;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+    max-height: 400px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00509e;
+}
+
+.contact-form button.button {
+    margin-top: 10px;
+    padding: 18px 60px;
+    font-size: 2rem;
+    background: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.contact-form button.button:hover {
+    background: #00509e;
+}
+
+@media (max-width: 900px) {
+    .contact-form {
+        width: 98vw;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+/* ...existing code... */
+.footer {
+    background: #f3f3f3;
+    padding: 40px 0 20px 0;
+    text-align: center;
+    margin-top: 0;
+}
+
+.footer-icons {
+    margin-bottom: 10px;
+}
+
+.footer-icon {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    border: 2px solid #003366;
+    border-radius: 50%;
+    margin: 0 12px;
+    font-size: 2rem;
+    color: #003366;
+    text-align: center;
+    vertical-align: middle;
+    transition: background 0.2s, color 0.2s;
+}
+
+.footer-icon:hover {
+    background: #003366;
+    color: #fff;
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #111;
+    margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .contact-form {
+    width: 98vw;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .internship-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .services-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
