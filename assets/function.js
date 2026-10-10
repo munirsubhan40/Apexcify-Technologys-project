@@ -1,1 +1,36 @@
-DQpsZXQgY3VycmVudEluZGV4ID0gMDsNCmNvbnN0IGltYWdlcyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJy5pbWFnZTEnKTsNCmNvbnN0IGxpZ2h0Ym94ID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZGl2Jyk7DQpsaWdodGJveC5jbGFzc05hbWUgPSAnbGlnaHRib3gnOw0KZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChsaWdodGJveCk7DQoNCmZ1bmN0aW9uIHNob3dMaWdodGJveChpbmRleCkgew0KICBpZiAoIWltYWdlcy5sZW5ndGgpIHJldHVybjsNCiAgY3VycmVudEluZGV4ID0gaW5kZXg7DQogIGxpZ2h0Ym94LmlubmVySFRNTCA9IGANCiAgICA8ZGl2IGNsYXNzPSJsaWdodGJveC1jb250ZW50Ij4NCiAgICAgIDxidXR0b24gY2xhc3M9InByZXYtYnRuIj4mIzg1OTI7PC9idXR0b24+DQogICAgICA8aW1nIHNyYz0iJHtpbWFnZXNbY3VycmVudEluZGV4XS5zcmN9IiBhbHQ9IiI+DQogICAgICA8YnV0dG9uIGNsYXNzPSJuZXh0LWJ0biI+JiM4NTk0OzwvYnV0dG9uPg0KICAgICAgPGJ1dHRvbiBjbGFzcz0iY2xvc2UtYnRuIj4mdGltZXM7PC9idXR0b24+DQogICAgPC9kaXY+DQogIGA7DQogIGxpZ2h0Ym94LnN0eWxlLmRpc3BsYXkgPSAnZmxleCc7DQoNCiAgbGlnaHRib3gucXVlcnlTZWxlY3RvcignLnByZXYtYnRuJykub25jbGljayA9ICgpID0+IHNob3dMaWdodGJveCgoY3VycmVudEluZGV4IC0gMSArIGltYWdlcy5sZW5ndGgpICUgaW1hZ2VzLmxlbmd0aCk7DQogIGxpZ2h0Ym94LnF1ZXJ5U2VsZWN0b3IoJy5uZXh0LWJ0bicpLm9uY2xpY2sgPSAoKSA9PiBzaG93TGlnaHRib3goKGN1cnJlbnRJbmRleCArIDEpICUgaW1hZ2VzLmxlbmd0aCk7DQogIGxpZ2h0Ym94LnF1ZXJ5U2VsZWN0b3IoJy5jbG9zZS1idG4nKS5vbmNsaWNrID0gKCkgPT4gbGlnaHRib3guc3R5bGUuZGlzcGxheSA9ICdub25lJzsNCn0NCg0KaW1hZ2VzLmZvckVhY2goKGltZywgaWR4KSA9PiB7DQogIGltZy5zdHlsZS5jdXJzb3IgPSAncG9pbnRlcic7DQogIGltZy5vbmNsaWNrID0gKCkgPT4gc2hvd0xpZ2h0Ym94KGlkeCk7DQp9KTsNCg0KDQpsaWdodGJveC5vbmNsaWNrID0gZSA9PiB7DQogIGlmIChlLnRhcmdldCA9PT0gbGlnaHRib3gpIGxpZ2h0Ym94LnN0eWxlLmRpc3BsYXkgPSAnbm9uZSc7DQp9Ow0KDQoNCg==
+
+let currentIndex = 0;
+const images = document.querySelectorAll('.image1');
+const lightbox = document.createElement('div');
+lightbox.className = 'lightbox';
+document.body.appendChild(lightbox);
+
+function showLightbox(index) {
+  if (!images.length) return;
+  currentIndex = index;
+  lightbox.innerHTML = `
+    <div class="lightbox-content">
+      <button class="prev-btn">&#8592;</button>
+      <img src="${images[currentIndex].src}" alt="">
+      <button class="next-btn">&#8594;</button>
+      <button class="close-btn">&times;</button>
+    </div>
+  `;
+  lightbox.style.display = 'flex';
+
+  lightbox.querySelector('.prev-btn').onclick = () => showLightbox((currentIndex - 1 + images.length) % images.length);
+  lightbox.querySelector('.next-btn').onclick = () => showLightbox((currentIndex + 1) % images.length);
+  lightbox.querySelector('.close-btn').onclick = () => lightbox.style.display = 'none';
+}
+
+images.forEach((img, idx) => {
+  img.style.cursor = 'pointer';
+  img.onclick = () => showLightbox(idx);
+});
+
+
+lightbox.onclick = e => {
+  if (e.target === lightbox) lightbox.style.display = 'none';
+};
+
+
